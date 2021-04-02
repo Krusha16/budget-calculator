@@ -15,7 +15,13 @@ function stylesTask(){
   .pipe(dest('dist/css'))
 }
 
+function imagesTask(){
+  return src(['src/Images/*'])
+  .pipe(dest('dist/Images'))
+}
+
 exports.html = htmlTask;
 exports.scripts = scriptsTask;
 exports.styles = stylesTask;
-exports.default = series(htmlTask, scriptsTask, stylesTask);
+export.images = imagesTask;
+exports.default = series(htmlTask, scriptsTask, stylesTask, imagesTask);
