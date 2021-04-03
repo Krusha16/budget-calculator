@@ -23,5 +23,5 @@ function imagesTask(){
 exports.html = htmlTask;
 exports.scripts = scriptsTask;
 exports.styles = stylesTask;
-export.images = imagesTask;
+exports.images = imagesTask;
 exports.default = series(htmlTask, scriptsTask, stylesTask, imagesTask);
